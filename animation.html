@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Animations</title>
+        <meta name="viewport" content="width=device-width", initial-scale="1.0"
+>    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            background-color: black;
+        }
+     
+     .sun{
+        position: absolute;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+     }
+     #sun{
+        background-color: yellow;
+        outline-offset: 400px;
+        outline: 1px solid white;
+        border-radius: 50%;
+        height: 350px;
+    }
+    .earth{
+        position: relative;
+        transform: rotate(26deg);
+        left: 600px;
+        justify-content: center;
+        align-items: center;
+    }
+    #earth1{
+        position:relative;
+        top: 5%;
+        border-radius: 50%;
+        animation-name: earth1;
+        animation-timing-function: linear;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+    }
+    @keyframes earth1{
+  0% {
+    transform: rotate(0deg);
+    translateX(100px) rotate(0deg);
+ }
+  50% {
+    transform: rotate(360deg);
+    translateX(100px) rotate(360deg);
+    } 
+}
+      /*  10%{margin-top:15px;transform: rotate(45deg);}
+        25%{margin-top: 20px; transform: rotate(60deg);}
+        50%{margin-top: 30px; transform: rotate(90deg);}
+        60%{margin-top: 50px; transform: rotate(125deg);}
+        75%{margin-top: 60px; transform: rotate(175deg);}*/
+    }
+    </style>
+    <body>
+        <div class="sun">
+            <img src="./sun1.jpeg" id="sun">
+            <div class="earth">
+                <div class="line"><img src="./earth.jpg" id="earth1"></div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
